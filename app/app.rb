@@ -19,11 +19,19 @@ class TechmarkManager < Sinatra::Base
     erb :'links/new'
   end
 
-  # post '/links/new' do
-  #   Link.create(url: params[:URL], title: params[:title], description: params[:description])
-  #   Category.create(category: params[:category])
-  # redirect to('/links')
-  # end
+  post '/links/new' do
+    link = Link.create(url: params[:url], title: params[:title], description: params[:description])
+    link.category << Category.create(name: params[:category])
+    link.save
+  redirect to('/links')
+  end
+
+  get '/links/:name' do
+    category = Category.first(name: params[:name])
+    @links = category ? category.links : []
+    erb :'links/links'
+  end
+
 
 
 

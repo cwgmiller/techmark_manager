@@ -7,7 +7,7 @@ feature 'Creating links' do
     fill_in 'title', with: 'Code Wars'
     fill_in 'category', with: 'General'
     fill_in 'description', with: 'self-learning'
-    click_button 'Create link'
+    click_button 'Create Link'
 
     expect(current_path).to eq '/links'
     expect(Link.count).to eq 1
