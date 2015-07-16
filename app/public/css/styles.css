@@ -129,26 +129,53 @@ label#signOutButton {
   text-align: right;
   margin-right: 1em;
   font-size: 15px;
+}
+
+#listlinks{
+  list-style-type: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+#category_links{
+  margin-bottom: 15px;
+}
+
+#category{
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+#links{
+  padding-left: 0;
+}
 
 /*styling for links.erb files*/
 
-#category {
-  display: inline-block;
-  margin-right: 50px;
+
+
+
+/*styling for links.erb files*/
+/*
+#category{
   font-size: 20px;
   text-decoration: none;
 }
 
 .linkheading{
-  text-align: center;
   margin-top: 30px;
-
-}
-
-.nav{
-  text-align: center;
 }
 
 .linksinputform{
   text-align: center;
 }
+
+.linkdetails{
+  font-size: 40px;
+}
+
+#links{
+  padding: 0;
+
+}*/

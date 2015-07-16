@@ -12,27 +12,29 @@
 
     <h1 class="linkheading" >Key Topics</h1>
 
-    <div class="nav">
-      <a href='/links/ruby' id="category">Ruby</a>
-      <a href='/links/javascript' id="category">Javascript</a>
-      <a href='/links/HTML_CSS' id="category">HTML &amp; CSS</a>
-      <a href='/links/web' id="category">Web Apps</a>
-      <a href='/links/general' id="category">General</a>
-    </div>
+    <ul id="listlinks">
+      <li id="category_links"><a href='/links/ruby' id="category">Ruby</a></li>
+      <li id="category_links"><a href='/links/javascript' id="category">Javascript</a></li>
+      <li id="category_links"><a href='/links/HTML_CSS' id="category">HTML &amp; CSS</a></li>
+      <li id="category_links"><a href='/links/web' id="category">Web Apps</a></li>
+      <li id="category_links"><a href='/links/general' id="category">General</a></li>
+    </ul>
+
+    <a href='/links/new'>Add a new link</a>
 
     <ul id="links">
       <% @links.each do |link| %>
         <% cat_string = '' %>
         <% link.categories.each {|category| cat_string << category.name + " "} %>
-          <ul>
-            Title: <a href="<%= link.url %>"><%= link.title %></a>
-            Category: <%= cat_string %>
-            Description: <%= link.description %>
-          </ul>
+          <ul id="linkdetails">URL: <a href="<%= link.url %>"><%= link.url %></a></ul>
+          <ul id="linkdetails">Title: <%= link.title %></ul>
+          <ul id="linkdetails">Category: <%= cat_string %></ul>
+          <ul id="linkdetails">Description: <%= link.description %></ul>
+          <br>
+          <br>
       <% end %>
     </ul>
 
-<a href='/links/new'>Add a new link</a>
 
 
   </body>
