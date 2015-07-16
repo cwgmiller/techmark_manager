@@ -1,7 +1,4 @@
 
-require 'spec_helper'
-require 'sinatra'
-
 feature 'Viewing links' do
 
   scenario 'I can see existing links on the page' do
