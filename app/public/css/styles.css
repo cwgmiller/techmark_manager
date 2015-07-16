@@ -103,12 +103,22 @@ text-align: center;
 }
 
 input.signOutButton {
-  margin-top: none;
-  margin-left: 2em;
+  margin-top: 2px;
+  margin-right: 2px;
   padding: none;
+  font-size: 8px;
+  float: right;
 }
 
 label {
   width: 9em;
   text-align: left;
+}
+
+label#signOutButton {
+  float:right;
+  width: auto;
+  text-align: right;
+  margin-right: 1em;
+  font-size: 15px;
 }
