@@ -26,8 +26,7 @@
       <% @links.each do |link| %>
         <% cat_string = '' %>
         <% link.categories.each {|category| cat_string << category.name + " "} %>
-          <ul id="linkdetails">URL: <a href="<%= link.url %>"><%= link.url %></a></ul>
-          <ul id="linkdetails">Title: <%= link.title %></ul>
+          <ul id="linkdetails">Title: <a href="<%= link.url %>"><%= link.title %></a></ul>
           <ul id="linkdetails">Category: <%= cat_string %></ul>
           <ul id="linkdetails">Description: <%= link.description %></ul>
           <br>
