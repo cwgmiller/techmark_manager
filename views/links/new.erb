@@ -8,17 +8,29 @@
     <h1 class="linkheading">Add your techbookmark!</h1>
 
     <form action='/links' method='post' class="linksinputform" >
+      <p>
+        <label>URL</label></br>
+        <input class='entryField' type='url' name='url' placeholder='www.makersacademy.com'>
+    </p>
 
-      <input class='entryField' type='text' name='url' placeholder='url'>
-      <input class='entryField' type='text' name='title' placeholder='Title'>
-      <select name='category' placeholder='Category'>
+    <p>
+      <label>Title</label></br>
+      <input class='entryField' type='text' name='title' placeholder='Makers Academy'>
+    </p>
+    <p>
+      <label>Category</label></br>
+      <select id='category' name='category' placeholder='Category'>
         <option value="ruby">Ruby</option>
         <option value="javascript">Javascript</option>
         <option value="HTML_CSS">HTML &amp; CSS</option>
         <option value="web">Web Apps</option>
         <option value="General">General</option>
       </select>
-      <input class='entryField' type='text' name='description' placeholder='Description'>
+    </p>
+    <p>
+        <label>Description</label></br>
+      <textarea class='entryField' id='description' type='text' name='description' placeholder='Learn to code in 12 weeks!'></textarea>
+    </p>
       <input type='submit' value='Create link'>
 
     </form>

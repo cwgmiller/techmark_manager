@@ -63,6 +63,13 @@ body {
 
 }
 
+textarea#description.entryField {
+  text-align: left;
+  padding: 0.4em 0.4em 0.4em 0;
+  width: 50em;
+  height: 200px;
+}
+
 ::-webkit-input-placeholder {
 text-align: left;
 letter-spacing:2px;
@@ -144,5 +151,4 @@ label#signOutButton {
 
 .linksinputform{
   text-align: center;
->>>>>>> 7d7430f7a7f5575f9a29795bf130c1a0902407d6
 }
