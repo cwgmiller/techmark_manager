@@ -2,7 +2,7 @@
 feature 'Viewing links' do
 
   scenario 'I can see existing links on the page' do
-    Link.create(url: 'www.rubymonk.com', title: 'Ruby Monk', description: 'useful for basics', categories: [Category.first_or_create(name: 'ruby')])
+    Link.create(url: 'www.rubymonk.com', title: 'Ruby Monk', description: 'useful for basics', categories: [Category.first_or_create(name: 'Ruby')])
     visit '/links'
     expect(page.status_code).to eq 200
 
@@ -15,7 +15,7 @@ feature 'Viewing links' do
   end
 
   scenario 'I can filter links by categories' do
-    Link.create(url: 'www.rubymonk.com', title: 'Ruby Monk', description: 'useful fo basics', categories: [Category.first_or_create(name: 'ruby')])
+    Link.create(url: 'www.rubymonk.com', title: 'Ruby Monk', description: 'useful fo basics', categories: [Category.first_or_create(name: 'Ruby')])
     visit 'links/ruby'
     within 'ul#links' do
       expect(page).not_to have_content('www.javascriptissexy.com')
