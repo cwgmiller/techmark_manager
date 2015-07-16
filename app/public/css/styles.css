@@ -115,10 +115,34 @@ label {
   text-align: left;
 }
 
+
 label#signOutButton {
   float:right;
   width: auto;
   text-align: right;
   margin-right: 1em;
   font-size: 15px;
+
+/*styling for links.erb files*/
+
+#category {
+  display: inline-block;
+  margin-right: 50px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.linkheading{
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.nav{
+  text-align: center;
+}
+
+.linksinputform{
+  text-align: center;
+>>>>>>> 7d7430f7a7f5575f9a29795bf130c1a0902407d6
 }

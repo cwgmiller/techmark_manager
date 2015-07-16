@@ -29,7 +29,7 @@ class TechmarkManager < Sinatra::Base
   end
 
   post '/links' do
-    link = Link.new(url: params[:url], title: params[:title].capitalize, description: params[:description].capitalize)
+    link = Link.new(url: params[:url], title: params[:title], description: params[:description].capitalize)
 
 
     multi_category = params[:category].split
