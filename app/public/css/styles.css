@@ -112,3 +112,26 @@ label {
   width: 9em;
   text-align: left;
 }
+
+/*styling for links.erb files*/
+
+#category {
+  display: inline-block;
+  margin-right: 50px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.linkheading{
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.nav{
+  text-align: center;
+}
+
+.linksinputform{
+  text-align: center;
+}

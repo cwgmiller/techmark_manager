@@ -2,20 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>links</title>
 
+    <title>links</title>
+    <link rel="stylesheet" type="text/css" href="./link.css">
   </head>
 
   <body>
 
 
-    <h1>Key Topics</h1>
+    <h1 class="linkheading" >Key Topics</h1>
 
-    <a href='/links/ruby' id="category">Ruby</p>
-    <a href='/links/javascript' id="category">Javascript</p>
-    <a href='/links/HTML_CSS' id="category">HTML &amp; CSS</p>
-    <a href='/links/web' id="category">Web Apps</p>
-    <a href='/links/general' id="category">General</p>
+    <div class="nav">
+      <a href='/links/ruby' id="category">Ruby</p>
+      <a href='/links/javascript' id="category">Javascript</p>
+      <a href='/links/HTML_CSS' id="category">HTML &amp; CSS</p>
+      <a href='/links/web' id="category">Web Apps</p>
+      <a href='/links/general' id="category">General</p>
+    </div>
 
     <ul id="links">
       <% @links.each do |link| %>
