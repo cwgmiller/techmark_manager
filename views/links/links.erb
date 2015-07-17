@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+ <head>
+   <meta charset="utf-8">
 
-    <title>links</title>
-    <link rel="stylesheet" type="text/css" href="./link.css">
-  </head>
+   <title>links</title>
+   <link rel="stylesheet" type="text/css" href="./link.css">
+ </head>
 
-  <body>
+ <body>
 
+<div id='topicList'>
 
-    <h1 class="linkheading" >Key Topics</h1>
+   <h1 class="linkheading" >Key Topics</h1>
 
-    <ul id="listlinks">
-      <li id="category_links"><a href='/links/ruby' id="category">Ruby</a></li>
-      <li id="category_links"><a href='/links/javascript' id="category">Javascript</a></li>
-      <li id="category_links"><a href='/links/HTML_CSS' id="category">HTML &amp; CSS</a></li>
-      <li id="category_links"><a href='/links/web' id="category">Web Apps</a></li>
-      <li id="category_links"><a href='/links/general' id="category">General</a></li>
-    </ul>
-
-    <a href='/links/new'>Add a new link</a>
-
-    <ul id="links">
-      <% @links.each do |link| %>
-        <% cat_string = '' %>
-        <% link.categories.each {|category| cat_string << category.name + " "} %>
-          <ul id="linkdetails">Title: <a href="<%= link.url %>"><%= link.title %></a></ul>
-          <ul id="linkdetails">Category: <%= cat_string %></ul>
-          <ul id="linkdetails">Description: <%= link.description %></ul>
-          <br>
-          <br>
-      <% end %>
-    </ul>
+   <a class="createLink" href='/links/new'>Add a new link</a>
 
 
+   <ul id="listlinks">
+     <li id="category_links"><a href='/links' id="category">All Links</a></l>
+     <li id="category_links"><a href='/links/ruby' id="category">Ruby</a></l>
+     <li id="category_links"><a href='/links/javascript' id="category">Javascript</a></li>
+     <li id="category_links"><a href='/links/HTML_CSS' id="category">HTML &amp; CSS</a></li>
+     <li id="category_links"><a href='/links/web' id="category">jQuery</a></li>
+     <li id="category_links"><a href='/links/general' id="category">General</a></li>
+   </ul>
 
-  </body>
+</div>
+
+<div id='linksPage'>
+   <ul id="links">
+     <% @links.each do |link| %>
+       <% cat_string = '' %>
+       <% link.categories.each {|category| cat_string << category.name + " "} %>
+         <ul id="linkdetails">Title: <a href="<%= link.url %>"><%= link.title %></a></ul>
+         <ul id="linkdetails">Category: <%= cat_string %></ul>
+         <ul id="linkdetails">Description: <%= link.description %></ul>
+         <br>
+         <br>
+     <% end %>
+   </ul>
+</div>
+
+
+ </body>
 
 
 </html>
